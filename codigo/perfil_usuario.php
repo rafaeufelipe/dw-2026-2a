@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +21,9 @@
     <?php
     require_once "conexao.php";
 
-    $sql ="SELECT * FROM usuario";
+    $idusuario = $_SESSION['idusuario'];
+
+    $sql ="SELECT * FROM usuario where idusuario = $idusuario";
 
     $resultados = mysqli_query($conexao, $sql);
 
