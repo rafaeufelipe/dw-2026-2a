@@ -16,23 +16,29 @@
     <td>FOTO</td>
     </tr>
     <?php
-    require_once ("form_usuario.php");
+    require_once "conexao.php";
 
-    $sql ="SELECT * FROM usuario"
+    $sql ="SELECT * FROM usuario";
 
     $resultados = mysqli_query($conexao, $sql);
 
     while ($linha = mysqli_fetch_array($resultados)) {
-        $idusuario = $linha['idusuario']    
-        $email = $linha['email']
-        $nome = $linha['nome']
-        $apelido = $linha['apelido']
-        $senha = $linha['senha']    
-        $foto = $linha['foto']
+        $idusuario = $linha['idusuario'];    
+        $email = $linha['email'];
+        $nome = $linha['nome'];
+        $apelido = $linha['apelido'];
+        $senha = $linha['senha'];    
+        $foto = $linha['foto'];
         
-
-
-    }
+        echo "<tr>";
+            echo "<td>$idusuario</td>";
+            echo "<td>$email</td>";
+            echo "<td>$nome</td>";
+            echo "<td>$apelido</td>";
+            echo "<td>$senha</td>";      
+            echo "<td>$foto</td>";       
+        echo "</tr>";
+        }
     ?>
     </table>
 </body>
