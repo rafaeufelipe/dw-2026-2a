@@ -1,4 +1,7 @@
-
+<?php
+session_start();
+require_once "conexao.php";
+?>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -13,16 +16,21 @@
 <form method="GET">
 
     <select name="idusuario">
-        <option>Escolha um usuário</option>
+        <option value="">Escolha um usuário</option>
 
         <?php
         $sql = "SELECT * FROM usuario";
         $resultado = mysqli_query($conexao, $sql);
 
         while ($linha = mysqli_fetch_array($resultado)) {
-            echo "<option value='".$linha['idusuario']."'>";
-            echo $linha['nome'];
-            echo "</option>";
+            $id = $linha['idusuario'];
+            $nome = $linha['nome'];
+
+            ?>
+            <option value="<?php echo $id; ?>">
+                <?php echo $nome; ?>
+            </option>
+            <?php
         }
         ?>
     </select>
@@ -33,7 +41,7 @@
 
 <?php
 
-if (isset($_GET['idusuario'])) {
+if (isset($_GET['idusuario']) && $_GET['idusuario'] != "") {
 
     $id = $_GET['idusuario'];
 
@@ -42,14 +50,32 @@ if (isset($_GET['idusuario'])) {
 
     while ($linha = mysqli_fetch_array($resultado)) {
 
+        $id = $linha['idusuario'];
+        $email = $linha['email'];
+        $nome = $linha['nome'];
+        $apelido = $linha['apelido'];
+        $foto = $linha['foto'];
+
         echo "<h3>Perfil do usuário</h3>";
+        echo "ID: ";
+        echo $id;
+        echo "<br>";
 
-        echo "ID: ".$linha['idusuario']."<br>";
-        echo "Email: ".$linha['email']."<br>";
-        echo "Nome: ".$linha['nome']."<br>";
-        echo "Apelido: ".$linha['apelido']."<br>";
-        echo "Foto: ".$linha['foto']."<br>";
+        echo "Email: ";
+        echo $email;
+        echo "<br>";
 
+        echo "Nome: ";
+        echo $nome;
+        echo "<br>";
+
+        echo "Apelido: ";
+        echo $apelido;
+        echo "<br>";
+
+        echo "Foto: ";
+        echo $foto;
+        echo "<br>";
     }
 }
 
