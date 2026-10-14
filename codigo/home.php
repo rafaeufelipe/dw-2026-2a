@@ -13,6 +13,7 @@
     <a href="listar_postagem.php">Ver postagens</a> <br><br>
     <a href="perfil_usuario.php">Veja as informações do seu perfil</a><br><br>
     <a href="listarPostagemUsuario.php">Veja as suas postagens</a><br><br>
+    <a href="lista_outro_usuario.php">Veja outros usuarios</a><br><br>
 
     <a href="deslogar.php">Sair...</a>
 </body>

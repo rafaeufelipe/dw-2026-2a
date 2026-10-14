@@ -1,8 +1,6 @@
 <?php
-session_start();
-require_once "conexao.php";
+require_once("form_usuario")
 ?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,25 +10,16 @@ require_once "conexao.php";
 <body>
 
 <h2>Ver perfil de outro usuário</h2>
-
-<form method="GET">
-
-    <select name="idusuario">
-        <option value="">Escolha um usuário</option>
-
+    <select>
+        <option>Escolha um usuário</option>
         <?php
-        $sql = "SELECT * FROM usuario";
+        $sql = "SELECT * FROM usuario WHERE idusuario != $idusuario";
+
         $resultado = mysqli_query($conexao, $sql);
-
         while ($linha = mysqli_fetch_array($resultado)) {
-            $id = $linha['idusuario'];
-            $nome = $linha['nome'];
-
-            ?>
-            <option value="<?php echo $id; ?>">
-                <?php echo $nome; ?>
-            </option>
-            <?php
+            echo "<option value=''".$linha['idusuario']."'>";
+            echo $linha['nome'];
+            echo "</option>";
         }
         ?>
     </select>
@@ -41,7 +30,7 @@ require_once "conexao.php";
 
 <?php
 
-if (isset($_GET['idusuario']) && $_GET['idusuario'] != "") {
+if (isset($_GET['idusuario'])) {
 
     $id = $_GET['idusuario'];
 
@@ -50,32 +39,14 @@ if (isset($_GET['idusuario']) && $_GET['idusuario'] != "") {
 
     while ($linha = mysqli_fetch_array($resultado)) {
 
-        $id = $linha['idusuario'];
-        $email = $linha['email'];
-        $nome = $linha['nome'];
-        $apelido = $linha['apelido'];
-        $foto = $linha['foto'];
-
         echo "<h3>Perfil do usuário</h3>";
-        echo "ID: ";
-        echo $id;
-        echo "<br>";
 
-        echo "Email: ";
-        echo $email;
-        echo "<br>";
+        echo "ID: ".$linha['idusuario']."<br>";
+        echo "Email: ".$linha['email']."<br>";
+        echo "Nome: ".$linha['nome']."<br>";
+        echo "Apelido: ".$linha['apelido']."<br>";
+        echo "Foto: ".$linha['foto']."<br>";
 
-        echo "Nome: ";
-        echo $nome;
-        echo "<br>";
-
-        echo "Apelido: ";
-        echo $apelido;
-        echo "<br>";
-
-        echo "Foto: ";
-        echo $foto;
-        echo "<br>";
     }
 }
 
