@@ -44,12 +44,11 @@ if (isset($_GET['idusuario'])) {
 
         echo "<h3>Perfil do usuário</h3>";
 
-        echo "ID: ".$linha['idusuario']."<br>";
-        echo "Email: ".$linha['email']."<br>";
-        echo "Nome: ".$linha['nome']."<br>";
-        echo "Apelido: ".$linha['apelido']."<br>";
-        echo "Foto: ".$linha['foto']."<br>";
-
+     echo "ID: ", $linha['idusuario'], "<br>";
+     echo "Email: ", $linha['email'], "<br>";
+     echo "Nome: ", $linha['nome'], "<br>";
+     echo "Apelido: ", $linha['apelido'], "<br>";
+     echo "Foto: ", $linha['foto'], "<br>";
     }
 }
 
