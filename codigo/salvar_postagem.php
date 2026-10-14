@@ -1,7 +1,6 @@
 <?php
 require_once "verificar_sessao.php";
-
-session_start();
+    
 require_once "conexao.php";
 
 $texto = $_GET['texto'];

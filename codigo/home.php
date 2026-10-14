@@ -9,8 +9,11 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="form_postagem.php">Nova postagem</a> <br>
-    <a href="listar_postagem.php">Ver postagens</a> <br>
+    <a href="form_postagem.php">Nova postagem</a> <br><br>
+    <a href="listar_postagem.php">Ver postagens</a> <br><br>
+    <a href="perfil_usuario.php">Veja as informações do seu perfil</a><br><br>
+    <a href="listarPostagemUsuario.php">Veja as suas postagens</a><br><br>
+
     <a href="deslogar.php">Sair...</a>
 </body>
 </html>
