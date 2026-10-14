@@ -1,6 +1,5 @@
 <?php
 session_start();
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,15 +9,7 @@ session_start();
     <title>Perfil</title>
 </head>
 <body>
-    <table>
-    <tr>
-    <td>ID</td>
-    <td>EMAIL</td>
-    <td>NOME</td>
-    <td>APELIDO</td>
-    <td>SENHA</td>
-    <td>FOTO</td>
-    </tr>
+
     <?php
     require_once "conexao.php";
 
@@ -36,16 +27,31 @@ session_start();
         $senha = $linha['senha'];    
         $foto = $linha['foto'];
         
-        echo "<tr>";
+            echo "ID DO USUARIO <br>";
             echo "<td>$idusuario</td>";
+            echo "<br><br>";
+
+            echo "EMAIL <br>";
             echo "<td>$email</td>";
+            echo "<br><br>";
+
+            echo "NOME <br>";
             echo "<td>$nome</td>";
+            echo "<br><br>";
+
+            echo "APELIDO <br>"; 
             echo "<td>$apelido</td>";
-            echo "<td>$senha</td>";      
-            echo "<td>$foto</td>";       
+            echo "<br><br>";
+
+            echo "SENHA <br>";
+            echo "<td>$senha</td>";
+            echo "<br><br>";     
+            
+            echo "FOTO <br>";
+            echo "<td>$foto</td>"; 
+            echo "<br><br>";      
         echo "</tr>";
         }
     ?>
-    </table>
 </body>
 </html>
