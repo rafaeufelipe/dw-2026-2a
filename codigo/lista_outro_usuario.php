@@ -19,40 +19,12 @@
         $sql = "SELECT * FROM usuario";
         $resultado = mysqli_query($conexao, $sql);
 
-        while ($linha = mysqli_fetch_array($resultado)) {
-            echo "<option value='".$linha['idusuario']."'>";
-            echo $linha['nome'];
-            echo "</option>";
-        }
-        ?>
-    </select>
-
-    <input type="submit" value="Ver perfil">
-
-</form>
-
-<?php
-
-if (isset($_GET['idusuario'])) {
-
-    $id = $_GET['idusuario'];
-
-    $sql = "SELECT * FROM usuario WHERE idusuario = $id";
-    $resultado = mysqli_query($conexao, $sql);
-
-    while ($linha = mysqli_fetch_array($resultado)) {
+         while ($linha = mysqli_fetch_array($resultado)) {
 
         echo "<h3>Perfil do usuário</h3>";
 
-     echo "ID: ", $linha['idusuario'], "<br>";
-     echo "Email: ", $linha['email'], "<br>";
-     echo "Nome: ", $linha['nome'], "<br>";
-     echo "Apelido: ", $linha['apelido'], "<br>";
-     echo "Foto: ", $linha['foto'], "<br>";
-    }
-}
-
-?>
-
-</body>
-</html>
+        echo "ID: ", $linha['idusuario'], "<br>";
+        echo "Email: ", $linha['email'], "<br>";
+        echo "Nome: ", $linha['nome'], "<br>";
+        echo "Apelido: ", $linha['apelido'], "<br>";
+        echo "Foto: ", $linha['foto'], "<br>";s
