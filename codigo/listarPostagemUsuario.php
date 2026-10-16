@@ -1,5 +1,18 @@
+<?php
+require_once "verificar_sessao.php";
+require_once "conexao.php";
+
+$idusuario_logado = $_SESSION['idusuario'];
+
+$sql = "SELECT postagem.idpostagem, postagem.texto, postagem.data_hora, usuario.idusuario
+FROM postagem, usuario
+WHERE postagem.idusuario = usuario.idusuario
+AND postagem.idusuario = $idusuario_logado
+ORDER BY postagem.data_hora DESC";
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -10,21 +23,22 @@
             border-style: solid;
             padding: 10px;
             border-radius: 5px;
+            border-color: brown;
         }
 
         .postagens {
-            border-color: grey;
+            border-color: black;
             border-radius: 10px;
         }
 
         .postagem {
-            border-color: black;
+            border-color: green;
             margin: 10px;
             border-radius: 6px;
         }
 
         .comentarios {
-            border-color: salmon;
+            border-color: orangered;
             border-radius: 6px;
         }
 
@@ -39,11 +53,8 @@
 
     <div class="postagens">
         <?php
-        require_once "conexao.php";
 
-        $sql = "SELECT postagem.idpostagem, postagem.texto, postagem.data_hora, usuario.idusuario, usuario.nome, usuario.apelido, usuario.foto
-        FROM postagem, usuario
-        WHERE postagem.idusuario = usuario.idusuario;";
+
 
         $resultados = mysqli_query($conexao, $sql);
 
@@ -53,25 +64,20 @@
             $data_hora = $linha['data_hora'];
             $idusuario = $linha['idusuario'];
 
-            $foto = $linha['foto'];
-            $nome = $linha['nome'];
-            $apelido = $linha['apelido'];
 
             echo "<div class='postagem'>";
 
             echo "<div>";
-            echo "<img src='$foto'>";
-            echo "$nome";
             echo $data_hora;
             echo "</div>";
 
             echo $texto;
 
-            $sql3 = "SELECT comentario.idcomentario, comentario.idpostagem, comentario.texto, usuario.idusuario, usuario.nome, usuario.apelido, usuario.foto
-            FROM comentario, usuario
-            WHERE idpostagem = $idpostagem
-            AND comentario.idusuario = usuario.idusuario
-            ORDER BY comentario.idcomentario ASC;";
+            $sql3 = "SELECT comentario.idcomentario, comentario.idpostagem, comentario.texto, usuario.idusuario
+                FROM comentario, usuario
+                WHERE idpostagem = $idpostagem
+                AND comentario.idusuario = usuario.idusuario
+                ORDER BY comentario.idcomentario ASC;";
 
             $comentarios = mysqli_query($conexao, $sql3);
 
@@ -84,10 +90,8 @@
                     $idusuario_comentario = $comentario['idusuario'];
                     $texto_comentario = $comentario['texto'];
 
-                    $foto_usuario_comentario = $comentario['foto'];
 
                     echo "<div>";
-                    echo "<img src='imagem_usuario/$foto_usuario_comentario'>";
                     echo $texto_comentario;
                     echo "</div>";
                 }
