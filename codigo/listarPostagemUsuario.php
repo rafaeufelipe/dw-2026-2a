@@ -41,15 +41,10 @@ ORDER BY postagem.data_hora DESC";
             border-color: orangered;
             border-radius: 6px;
         }
-
-        .titulo {
-            text-align: center;
-        }
     </style>
 </head>
 
 <body>
-    <h2 class="titulo">Suas Postagens</h2>
 
     <div class="postagens">
         <?php
