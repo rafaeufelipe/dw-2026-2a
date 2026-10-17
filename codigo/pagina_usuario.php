@@ -27,19 +27,39 @@
             border: 0;
         }
 
-        .titulo-postagens {
+        .titulo {
             margin: 0;
             padding: 8px 0;
             text-align: center;
+        }
+
+        .perfil {
+            display: block;
+            width: 100%;
+            height: 150px;
+            border: 0;
+        }
+
+        .seguidores {
+            display: flex;
+            gap: 40px;
+            margin-top: 10px;
+            padding: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body>
-    <div class="conteudo-principal">
+    <h3 class="titulo">PERFIL DO USUÁRIO</h3>
 
+    <div class="conteudo-principal">
+        <iframe src="perfil_usuario.php" class="perfil"></iframe>
+        <iframe src="contar_seguidores.php" class="seguidores"></iframe>
     </div>
-    <h3 class="titulo-postagens">Suas Postagens</h3>
+
+    <h3 class="titulo">Suas Postagens</h3>
     <iframe src="listarPostagemUsuario.php" class="parte-inferior">
 
     </iframe>
