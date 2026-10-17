@@ -41,8 +41,7 @@
         }
 
         .seguidores {
-            display: block;
-            width: 100%;
+            display: flex;
             height: 90px;
             border: 0;
         }
