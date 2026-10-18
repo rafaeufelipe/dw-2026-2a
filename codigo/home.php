@@ -19,6 +19,9 @@
         }
 
         .menu {
+            font-family: "Limelight", sans-serif;
+            font-weight: 400;
+            font-style: normal;
             display: flex;
             flex-direction: column;
             gap: 12px;
@@ -57,9 +60,12 @@
         <a href="perfil_usuario.php">Veja as informações do seu perfil</a>
         <a href="listarPostagemUsuario.php">Veja as suas postagens</a>
         <a href="lista_outro_usuario.php">Veja outros usuários</a>
-        <a href="lista_outro_usuario.php">Conte seguidores</a>
         <a href="botao_seguir.php">Botão de seguir</a>
         <a href="deslogar.php" class="sair">Sair...</a>
     </div>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Coiny&family=Limelight&display=swap" rel="stylesheet">
+
 </body>
 </html>
