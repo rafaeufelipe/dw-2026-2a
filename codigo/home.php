@@ -57,8 +57,7 @@
     <div class="menu">
         <a href="form_postagem.php">Nova postagem</a>
         <a href="listar_postagem.php">Ver postagens</a>
-        <a href="perfil_usuario.php">Veja as informações do seu perfil</a>
-        <a href="listarPostagemUsuario.php">Veja as suas postagens</a>
+        <a href="pagina_usuario.php">Veja as informações do seu perfil</a>
         <a href="lista_outro_usuario.php">Veja outros usuários</a>
         <a href="botao_seguir.php">Botão de seguir</a>
         <a href="deslogar.php" class="sair">Sair...</a>
