@@ -5,6 +5,7 @@ require_once "conexao.php";
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +19,8 @@ require_once "conexao.php";
 
         .container {
             width: 350px;
-            margin: 40px auto;   /* centraliza na horizontal */
+            margin: 40px auto;
+            /* centraliza na horizontal */
         }
 
         h2 {
@@ -66,66 +68,76 @@ require_once "conexao.php";
         .perfil p {
             margin: 8px 0;
         }
+
+        iframe {
+            border: none; /* tira a borda cinza */
+            width: 100%;
+            height: 50px;   /* só o necessário para caber o botão */
+            display: block;
+            overflow: hidden;
+        }
     </style>
 </head>
+
 <body>
 
-<div class="container">
+    <div class="container">
 
-    <h2 id="titulo" >Ver perfil de outro usuário</h2>
+        <h2 id="titulo">Ver perfil de outro usuário</h2>
 
-    <form method="GET">
+        <form method="GET">
 
-        <select name="idusuario">
-            <option value="">Escolha um usuário</option>
+            <select name="idusuario">
+                <option value="">Escolha um usuário</option>
 
-            <?php
-            $sql = "SELECT * FROM usuario";
+                <?php
+                $sql = "SELECT * FROM usuario";
+                $resultado = mysqli_query($conexao, $sql);
+
+                while ($linha = mysqli_fetch_array($resultado)) {
+                    $id = $linha['idusuario'];
+                    $nome = $linha['nome'];
+                ?>
+                    <option value="<?php echo $id; ?>">
+                        <?php echo $nome; ?>
+                    </option>
+                <?php
+                }
+                ?>
+            </select>
+
+            <input type="submit" value="Ver perfil">
+        </form>
+
+        <?php
+        if (isset($_GET['idusuario']) && $_GET['idusuario'] != "") {
+
+            $id = $_GET['idusuario'];
+
+            $sql = "SELECT * FROM usuario WHERE idusuario = $id";
             $resultado = mysqli_query($conexao, $sql);
 
             while ($linha = mysqli_fetch_array($resultado)) {
+
                 $id = $linha['idusuario'];
+                $email = $linha['email'];
                 $nome = $linha['nome'];
-            ?>
-                <option value="<?php echo $id; ?>">
-                    <?php echo $nome; ?>
-                </option>
-            <?php
+                $apelido = $linha['apelido'];
+                $foto = $linha['foto'];
+
+                echo "<div class='perfil'>";
+                echo "<h3>Perfil do usuário</h3>";
+                echo "<p><b>ID:</b> $id</p>";
+                echo "<p><b>Email:</b> $email</p>";
+                echo "<p><b>Nome:</b> $nome</p>";
+                echo "<p><b>Apelido:</b> $apelido</p>";
+                echo "<p><b>Foto:</b> $foto</p>";
+                echo "<iframe src='botao_seguir.php'></iframe>";
+                echo "</div>";
             }
-            ?>
-        </select>
-
-        <input type="submit" value="Ver perfil"> //colocar botao depois
-    </form>
-
-    <?php
-    if (isset($_GET['idusuario']) && $_GET['idusuario'] != "") {
-
-        $id = $_GET['idusuario'];
-
-        $sql = "SELECT * FROM usuario WHERE idusuario = $id";
-        $resultado = mysqli_query($conexao, $sql);
-
-        while ($linha = mysqli_fetch_array($resultado)) {
-
-            $id = $linha['idusuario'];
-            $email = $linha['email'];
-            $nome = $linha['nome'];
-            $apelido = $linha['apelido'];
-            $foto = $linha['foto'];
-
-            echo "<div class='perfil'>";
-            echo "<h3>Perfil do usuário</h3>";
-            echo "<p><b>ID:</b> $id</p>";
-            echo "<p><b>Email:</b> $email</p>";
-            echo "<p><b>Nome:</b> $nome</p>";
-            echo "<p><b>Apelido:</b> $apelido</p>";
-            echo "<p><b>Foto:</b> $foto</p>";
-            echo "</div>";
         }
-    }
-    ?>
+        ?>
 
-    <iframe src="botao_seguir.php"></iframe>
 </body>
+
 </html>
