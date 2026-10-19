@@ -19,27 +19,40 @@ ORDER BY postagem.data_hora DESC";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Postagem do Usuario</title>
     <style>
+        body {
+            margin: 0;
+            background: white;
+            font-family: Arial, sans-serif;
+
+        }
+
         div {
             border-style: solid;
             padding: 10px;
             border-radius: 5px;
-            border-color: brown;
+            border-color: black;
+
         }
 
+
         .postagens {
-            border-color: black;
-            border-radius: 10px;
+            border-radius: 20px;
+            border: 1px solid #dbdbdb;
+
+
         }
 
         .postagem {
-            border-color: green;
+            border-color: black;
             margin: 10px;
             border-radius: 6px;
+            background-color: #F9E6A8;
         }
 
         .comentarios {
-            border-color: orangered;
+            border-color: black;
             border-radius: 6px;
+            background-color: #c7b785;
         }
     </style>
 </head>
