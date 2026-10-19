@@ -17,7 +17,6 @@ session_start();
 
         .perfil {
             padding: 15px;
-            border: 2px solid black;
             border-radius: 10px;
         }
 
@@ -33,11 +32,13 @@ session_start();
         .dados {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px 40px;
+            gap: 10px 0;
         }
 
         .campo {
             display: block;
+            padding: 0 20px;
+            border-left: 1px solid black;
         }
     </style>
 </head>

@@ -32,11 +32,10 @@ $seguindo = $linha[0];
             display: flex;
             gap: 40px;
             padding: 15px;
-            border: 2px solid black;
             border-radius: 10px;
         }
 
-        .contagem p {
+        .contagem h3 {
             margin: 0;
         }
     </style>
@@ -46,8 +45,8 @@ $seguindo = $linha[0];
 <body>
 
     <div class="contagem">
-        <p><?= $seguidores ?> seguidores</p>
-        <p><?= $seguindo ?> seguindo</p>
+        <h3><?= $seguidores ?> seguidores</h3>
+        <h3><?= $seguindo ?> seguindo</h3>
     </div>
 </body>
 

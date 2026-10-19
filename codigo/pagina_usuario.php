@@ -11,7 +11,10 @@
         body {
             height: 100%;
             margin: 0;
+            background: #F9E6A8;
+            font-family: Arial, sans-serif;
         }
+
 
         .conteudo-principal {
             height: 75vh;
@@ -36,14 +39,21 @@
         .perfil {
             display: block;
             width: 100%;
-            height: 150px;
+            height: 90px;
             border: 0;
+            background-color: white;
+            font-family: Arial, sans-serif;
+            border-radius: 14px;
+
+
         }
 
         .seguidores {
             display: flex;
-            height: 90px;
+            height: 75px;
             border: 0;
+            background-color: white;
+            border-radius: 14px;
         }
     </style>
 </head>
@@ -52,7 +62,7 @@
     <h3 class="titulo">PERFIL DO USUÁRIO</h3>
 
     <div class="conteudo-principal">
-        <iframe src="perfil_usuario.php" class="perfil"></iframe>
+        <iframe src="perfil_usuario.php" class="perfil"></iframe><br>
         <iframe src="contar_seguidores.php" class="seguidores"></iframe>
     </div>
 

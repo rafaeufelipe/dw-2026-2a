@@ -6,22 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            margin: 0;
+            background: #F9E6A8;
+            font-family: Arial, sans-serif;
+        }
+
+        .postagens {
+            width: 1200px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 14px;
+            border: 1px solid #dbdbdb;
+
+            /* centraliza na horizontal */
+        }
+
+        h2 {
+            text-align: center;
+        }
+
         div {
             border-style: solid;
             padding: 10px;
         }
 
-        .postagens {
-            border-color: blue;
-        }
-
         .postagem {
             border-color: black;
             margin: 10px;
+            border-radius: 10px;
+            background-color: #F9E6A8;
+
         }
 
         .comentarios {
-            border-color: green;
+            margin: 30px;
+            border-color: black;
+            background-color: #c7b785;
+            border-radius: 10px;
+
         }
     </style>
 </head>
@@ -55,6 +78,7 @@
             echo "<div>";
             echo "<img src='$foto'>";
             echo "$nome";
+            echo "<br><br>";
             echo $data_hora;
             echo "</div>";
 
