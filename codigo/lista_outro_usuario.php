@@ -95,13 +95,13 @@ require_once "conexao.php";
             ?>
         </select>
 
-        <input type="submit" value="Ver perfil">
+        <input type="submit" value="Ver perfil"> //colocar botao depois
     </form>
 
     <?php
     if (isset($_GET['idusuario']) && $_GET['idusuario'] != "") {
 
-        $id = (int) $_GET['idusuario'];
+        $id = $_GET['idusuario'];
 
         $sql = "SELECT * FROM usuario WHERE idusuario = $id";
         $resultado = mysqli_query($conexao, $sql);
@@ -125,5 +125,7 @@ require_once "conexao.php";
         }
     }
     ?>
+
+    <iframe src="botao_seguir.php"></iframe>
 </body>
 </html>
