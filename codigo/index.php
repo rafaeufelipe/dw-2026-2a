@@ -38,7 +38,7 @@
         .login input[type="email"],
         .login input[type="password"] {
             width: 100%;
-            box-sizing: border-box;
+            box-sizing: border-box;  /* faz o width de 100% já contar o padding e a borda (evita estourar para fora) */
             padding: 10px;
             margin-bottom: 12px;
             border: 1px solid #dbdbdb;

@@ -30,22 +30,22 @@ require_once "conexao.php";
         select {
             width: 100%;
             padding: 10px;
-            margin-bottom: 12px;
+            margin-bottom: 12px;  /* espaço por fora, embaixo, para separar do botão */
             border: 1px solid #dbdbdb;
-            border-radius: 6px;
+            border-radius: 6px; /* cantos arredondados */
             background: #fff;
             font-size: 14px;
         }
 
         input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
+            width: 100%; /* ocupa toda a largura do container */
+            padding: 10px;   /* espaço interno, deixa o botão mais alto */
+            border: none;   /* tira a borda padrão do navegador */
+            border-radius: 8px; /* cantos arredondados */
             background: #D45060;
             color: #fff;
-            font-weight: bold;
-            cursor: pointer;
+            font-weight: bold;  /* letra em negrito */
+            cursor: pointer;   /* o mouse vira "mãozinha" ao passar em cima */
         }
 
         input[type="submit"]:hover {
@@ -56,25 +56,25 @@ require_once "conexao.php";
             background: #fff;
             border: 1px solid #dbdbdb;
             border-radius: 8px;
-            padding: 20px;
-            margin-top: 25px;
+            padding: 20px;  /* espaço interno entre a borda e o conteúdo */
+            margin-top: 25px;  /* espaço por fora, em cima, para separar do formulário */
         }
 
         .perfil h3 {
-            margin: 0 0 15px 0;
+            margin: 0 0 15px 0; /* margens: 0 em cima, 0 na direita, 15px embaixo, 0 na esquerda */
             text-align: center;
         }
 
         .perfil p {
-            margin: 8px 0;
+            margin: 8px 0;  /* 8px de espaço em cima e embaixo, 0 nos lados */
         }
 
         iframe {
             border: none; /* tira a borda cinza */
-            width: 100%;
+            width: 100%;  /* ocupa toda a largura do cartão */
             height: 50px;   /* só o necessário para caber o botão */
-            display: block;
-            overflow: hidden;
+            display: block; /* tira o espacinho que o iframe deixa embaixo */
+            overflow: hidden;  /* esconde barras de rolagem se algo passar do tamanho */
         }
     </style>
 </head>

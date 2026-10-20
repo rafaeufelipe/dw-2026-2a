@@ -19,7 +19,7 @@
 }
 
         form {
-            width: 350px;
+            width: 350px;  /* largura fixa do formulário */
             text-align: center;
         }
 
@@ -27,19 +27,19 @@
             width: 100%;
             height: 100px;
             border: 1px solid #800020;
-            border-radius: 6px;
-            resize: none;
+            border-radius: 6px;  /* cantos arredondados */
+            resize: none; /* impede o usuário de arrastar o canto para mudar o tamanho */
         }
 
         input[type="submit"] {
             margin-top: 10px;
-            padding: 10px 30px;
+            padding: 10px 30px;   /* espaço interno: 10px em cima/baixo e 30px nos lados */
             border: none;
             border-radius: 8px;
             background: #800020;
             color: #fff;
             font-weight: bold;
-            cursor: pointer;
+            cursor: pointer;    /* o mouse vira "mãozinha" ao passar em cima */
         }
     </style>
 </head>
