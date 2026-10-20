@@ -104,7 +104,7 @@ require_once "conexao.php";
                 <?php
                 }
                 ?>
-            </select>
+            </select> <!-- selecionar o usuario que vc quer stalker -->
 
             <input type="submit" value="Ver perfil">
         </form>
@@ -136,7 +136,7 @@ require_once "conexao.php";
                 echo "</div>";
             }
         }
-        ?>
+        ?> 
 
 </body>
 

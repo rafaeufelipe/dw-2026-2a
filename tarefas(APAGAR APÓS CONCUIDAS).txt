@@ -1,8 +1,0 @@
-CSS NO "listar_postagem.php"
-
-CSS NO "pagina_usuario.php" E ADICIONAR BOTÃO DE SEGUIR NELE
-
-
-
-
-APAGAR ESSE ARQUIVO APÓS FINALIZAR AS TAREFAS
