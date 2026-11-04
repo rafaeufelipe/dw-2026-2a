@@ -22,19 +22,19 @@ $seguindo = $linha[0]; /* conta os seguindo*/
     <title>Contagem de seguidores</title>
 
     <style>
-        body {
-            margin: 0;
+        body { /* Define os espaçamentos gerais da página */
+            margin: 0; 
             padding: 10px;
         }
 
-        .contagem {
+        .contagem { /* Organiza as contagens lado a lado e define seus espaçamentos */
             display: flex;
             gap: 40px;
             padding: 15px;
             border-radius: 10px;
         }
 
-        .contagem h3 {
+        .contagem h3 { /* Remove as margens padrão dos títulos */
             margin: 0;
         }
     </style>

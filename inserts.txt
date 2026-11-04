@@ -1,0 +1,55 @@
+-- =============================================
+-- 1. TABELA: usuario (40 inserts)
+-- =============================================
+INSERT INTO usuario (idusuario, nome, apelido, email, senha, foto) VALUES
+(1, 'Rafael', 'rafael123', 'rafael@gmail.com', '123456', 'rafael.jpg'),
+(2, 'João', 'joaozin', 'joao@gmail.com', '123456', 'joao.jpg'),
+(3, 'Maria', 'maria01', 'maria@gmail.com', '123456', 'maria.jpg'),
+(4, 'Lucas', 'lucas_dev', 'lucas@gmail.com', '123456', 'lucas.jpg'),
+(5, 'Ana', 'aninha', 'ana@gmail.com', '123456', 'ana.jpg'),
+(6, 'Pedro', 'pedrin', 'pedro@gmail.com', '123456', 'pedro.jpg'),
+(7, 'Gabriela', 'gabi123', 'gabriela@gmail.com', '123456', 'gabriela.jpg'),
+(8, 'Carlos', 'carlos10', 'carlos@gmail.com', '123456', 'carlos.jpg'),
+(9, 'Beatriz', 'biazinha', 'beatriz@gmail.com', '123456', 'beatriz.jpg'),
+(10, 'Matheus', 'math', 'matheus@gmail.com', '123456', 'matheus.jpg'),
+(11, 'Fernando Souza', 'nando_s', 'fernando@gmail.com', '123456', 'fernando.jpg'),
+(12, 'Camila Lima', 'camilinha', 'camila@gmail.com', '123456', 'camila.jpg'),
+(13, 'Rodrigo Alves', 'rodrigo_a', 'rodrigo@gmail.com', '123456', 'rodrigo.jpg'),
+(14, 'Patricia Rocha', 'pati_rocha', 'patricia@gmail.com', '123456', 'patricia.jpg'),
+(15, 'Gustavo Martins', 'gustavom', 'gustavo@gmail.com', '123456', 'gustavo.jpg'),
+(16, 'Larissa Dias', 'lari_dias', 'larissa@gmail.com', '123456', 'larissa.jpg'),
+(17, 'Vinicius Ramos', 'vini_ramos', 'vinicius@gmail.com', '123456', 'vinicius.jpg'),
+(18, 'Amanda Barbosa', 'amandab', 'amanda@gmail.com', '123456', 'amanda.jpg'),
+(19, 'Thiago Castro', 'thiagoc', 'thiago@gmail.com', '123456', 'thiago.jpg'),
+(20, 'Juliana Ribeiro', 'ju_ribeiro', 'juliana@gmail.com', '123456', 'juliana.jpg'),
+(21, 'Leonardo Carvalho', 'leoc', 'leonardo@gmail.com', '123456', 'leonardo.jpg'),
+(22, 'Fernanda Cardoso', 'fecardoso', 'fernandac@gmail.com', '123456', 'fernandac.jpg'),
+(23, 'Marcos Teixeira', 'marcost', 'marcos@gmail.com', '123456', 'marcos.jpg'),
+(24, 'Aline Ferreira', 'aline_f', 'aline@gmail.com', '123456', 'aline.jpg'),
+(25, 'Eduardo Gomes', 'edugomes', 'eduardo@gmail.com', '123456', 'eduardo.jpg'),
+(26, 'Vanessa Martins', 'vanessa_m', 'vanessa@gmail.com', '123456', 'vanessa.jpg'),
+(27, 'Gabriel Araujo', 'gabriel_a', 'gabriel@gmail.com', '123456', 'gabriel.jpg'),
+(28, 'Leticia Melo', 'leticiam', 'leticia@gmail.com', '123456', 'leticia.jpg'),
+(29, 'Daniel Barbosa', 'daniel_b', 'daniel@gmail.com', '123456', 'daniel.jpg'),
+(30, 'Luana Correia', 'luanac', 'luana@gmail.com', '123456', 'luana.jpg'),
+(31, 'Caio Nogueira', 'caion', 'caio@gmail.com', '123456', 'caio.jpg'),
+(32, 'Bruna Mendes', 'brunam', 'bruna@gmail.com', '123456', 'bruna.jpg'),
+(33, 'Igor Freitas', 'igorf', 'igor@gmail.com', '123456', 'igor.jpg'),
+(34, 'Jessica Ramos', 'jessicar', 'jessica@gmail.com', '123456', 'jessica.jpg'),
+(35, 'Renato Vieira', 'renatov', 'renato@gmail.com', '123456', 'renato.jpg'),
+(36, 'Tatiane Duarte', 'tatiduarte', 'tatiane@gmail.com', '123456', 'tatiane.jpg'),
+(37, 'Samuel Farias', 'samuelf', 'samuel@gmail.com', '123456', 'samuel.jpg'),
+(38, 'Priscila Cunha', 'priscilac', 'priscila@gmail.com', '123456', 'priscila.jpg'),
+(39, 'Marcelo Lopes', 'marcelol', 'marcelo@gmail.com', '123456', 'marcelo.jpg'),
+(40, 'Renata Monteiro', 'renatam', 'renata@gmail.com', '123456', 'renata.jpg');
+
+-- =============================================
+-- 2. TABELA: postagem (30 inserts)
+-- =============================================
+INSERT INTO postagem (texto, idusuario) VALUES 
+('Olá pessoal! Essa é minha primeira postagem.', 1),
+('Hoje estou estudando programação.', 1),
+('Começando um novo projeto.', 2),
+('Que dia incrível!', 2),
+('Estou aprendendo bastante sobre banco de dados.', 3),
+('Hoje foi um ótimo dia para estudar.', 4),

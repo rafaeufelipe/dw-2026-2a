@@ -4,8 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <style>
+    
     body {
-      color: #F9E6A8; margin: 0;
+      color: #F9E6A8; margin: 0; 
       height: 100vh;
     }
 
